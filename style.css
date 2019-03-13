@@ -201,3 +201,48 @@ body {
 	grid-area: website;
 }
 
+.marker {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.marker > header{
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.marker > header > .business {
+	width: 60%;
+}
+.marker > header > .business::after {
+	font-family: 'Knewave';
+	font-size: 48px;
+
+	line-height: 1.2;
+}
+.marker > main {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.marker > main > * {
+	font-family: 'Averia Libre';
+	font-size: 20px;
+
+	line-height: 1.6;
+}
+.marker > main > .name {
+	text-transform: uppercase;
+
+	font-size: 24px;
+	font-weight: 700;
+
+	letter-spacing: 1px;
+}
+.marker > main > .website {
+	font-weight: 700;
+}
