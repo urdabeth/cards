@@ -1,7 +1,8 @@
 body {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 	align-items: center;
 }
 
@@ -275,4 +276,57 @@ body {
 }
 .marker > main > .website {
 	font-weight: 700;
+}
+
+.lines {
+	overflow: hidden;
+}
+.lines > header {
+	width: 500px;
+	height: 600px;
+
+	z-index: -1;
+	position: relative;
+
+	transform: rotate(45deg) scale(2);
+
+	font-size: 20px;
+	font-family: 'Monoton';
+
+	line-height: 0.8;
+	
+	word-break: break-all;
+
+	opacity: 0.2;
+	overflow: hidden;
+}
+.lines > main {
+	position: absolute;
+	z-index: 3;
+
+	margin-top: -600px;
+
+	height: 400px;
+	width: 700px;
+
+	padding: 20px;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	font-family: 'Rye';
+	font-size: 40px;
+	color: #c70000;
+
+	line-height: 1;
+}
+.lines > main > .name {
+	font-size: 80px;
+}
+.lines > main > .website {
+	text-align: right;
+	width: 100%;
 }
