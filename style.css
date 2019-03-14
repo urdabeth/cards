@@ -7,17 +7,14 @@ body {
 
 .card {
 	margin: 10px;
-	box-shadow: black 0 0 20px;
+	box-shadow: #999 0 0 20px;
 	height: 400px;
 	width: 700px;
 	box-sizing: border-box;
 }
-.card-vertical {
-	margin: 10px;
-	box-shadow: black 0 0 20px;
+.vertical {
 	height: 700px;
 	width: 400px;
-	box-sizing: border-box;
 }
 .business::after {
 	content: 'Lorem Ipsum & Co.';
@@ -42,21 +39,38 @@ body {
 }
 
 .plain {
-	padding: 40px;
+	padding: 60px 80px;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-
 }
 .plain > *::after {
 	font-family: 'Lora';
 	font-size: 28px;
 
-	color: #6b6b6b;
+	line-height: 1.4;
+}
+.plain > .business {
+	transform:  rotate(90deg);
 
-	line-height: 1;
+	position: absolute;
+	margin-top: 90px;
+	margin-left: 370px;
+
+	z-index: 3;
+
+	text-align: center;
+	
+	line-height: 110px;
+	
+	width: 400px;
+	height: 100px;
+}
+.plain > .business::after {
+	color: #fff;
+	font-size: 30px;
 }
 .plain > .name::after {
 	font-size: 48px;
@@ -76,10 +90,9 @@ body {
 	position: absolute;
 	z-index: 1;
 
-	margin-top: -40px;
-	margin-left: 560px;
+	margin-top: -60px;
+	margin-left: 520px;
 }
-
 
 .swatch {
 	padding-bottom: 20px;
@@ -109,57 +122,66 @@ body {
 	height: 400px;
 }
 .swatch > header > *::after {
-	color: #6c6363;
-
-	font-family: 'Eczar';
-	font-size: 22px;
+	font-family: 'Arima Madurai';
+	font-size: 24px;
 	
 	line-height: 1.2;
 }
+.swatch > header > .business::after {
+	font-weight: 900;
+}
+.swatch > header > .name {
+	border-top: 1px solid black;
+	width: 90%;
+	text-align: center;
+	padding-top: 10px;
+}
 .swatch > header > .name::after {
 	font-size: 48px;
-	font-weight: 700;
+	font-weight: 900;
 	
 	text-transform: uppercase;
-	
-	letter-spacing: 4px;
+}
+.swatch > header > .job {
+	border-bottom: 1px solid black;
+	width: 90%;
+	text-align: center;
+	padding-bottom: 10px;
 }
 
 .gold {
-	padding: 20px;
+	padding: 20px;;
 
-	background-color: #f1ede2;
+	background-color: #fff9e8;
 
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(20, 1fr);
 
 	grid-template-areas: 
-	"logo . ."
-	". . ."
-	". . ."
-	". . ."
-	"name name name" 
-	"job job job"
-	". . ."
-	". . ."
-	". . ."
-	". phone phone"
-	". email email"
-	". social social"
-	". . ."
-	". . ."
-	". . ."
-	". . ."
-	". . ."
-	". . ."
-	". business business"
-	". website website"
-	;
+	"logo logo . ."
+	". . . ."
+	". . . ."
+	"name name name name" 
+	"job job job job"
+	". . . ."
+	". . . ."
+	". phone phone phone"
+	". email email email"
+	". social social social"
+	". . . ."
+	". . . ."
+	". . . ."
+	". . . ."
+	". . . ."
+	". . . ."
+	". . . ."
+	". business business business"
+	". website website website";
 }
 .gold > *::after {
 	font-family: 'Dosis';
-	font-size: 24px;
+	font-size: 28px;
 	text-transform: lowercase;
 
 	line-height: 1;
@@ -174,6 +196,7 @@ body {
 .gold > .logo > .material-icons {
 	color: #6d4d03;
 	font-size: 60px !important;
+	margin-right: -20px;
 }
 .gold > .name {
 	grid-area: name;
@@ -197,6 +220,9 @@ body {
 .gold > .business {
 	grid-area: business;
 }
+.gold > .business::after {
+	font-weight: 700;
+}
 .gold > .website {
 	grid-area: website;
 }
@@ -211,6 +237,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	padding-left: 40px;
 }
 .marker > header > .business {
 	width: 60%;
@@ -234,6 +262,8 @@ body {
 	font-size: 20px;
 
 	line-height: 1.6;
+
+	padding-left: 60px;
 }
 .marker > main > .name {
 	text-transform: uppercase;
