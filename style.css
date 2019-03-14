@@ -108,7 +108,7 @@ body {
 .swatch > main > img {
 	height: 100%;	
 
-	opacity: 0.5;
+	opacity: 0.3;
 }
 .swatch > header {
 	z-index: 10; 
@@ -297,7 +297,7 @@ body {
 	
 	word-break: break-all;
 
-	opacity: 0.2;
+	opacity: 0.20;
 	overflow: hidden;
 }
 .lines > main {
@@ -380,4 +380,93 @@ body {
 
 	font-size: 20px;
 	letter-spacing: 1px;
+}
+
+.dark {
+	background-color: #192050;
+	color: #c3a23e;
+}
+.dark > main {
+	padding: 40px;
+	box-sizing: border-box;
+
+	height: 100%;
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-areas: 
+		"business business business business icon"
+		"website website website website icon"
+		"name name name name name"
+		"job job job phone phone"
+		"social social email email email";	
+}
+.dark > main > div {
+	text-align: center;
+	
+	box-shadow: 0 0 0 2px #336b7b;
+	
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	font-family: 'Merriweather';
+	font-size: 22px;
+
+	padding: 0 20px;
+}
+.dark > main > .name {
+	grid-area: name;
+
+	font-family: 'Diplomata SC';
+	font-size: 36px;
+
+	letter-spacing: 2px;
+
+	align-items: center;
+	padding: 0;
+}
+.dark > main > .job {
+	grid-area: job;
+
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.dark > main > .social {
+	grid-area: social;
+}
+.dark > main > .phone {
+	grid-area: phone;
+	align-items: flex-end;
+}
+.dark > main > .email {
+	grid-area: email;
+	align-items: flex-end;
+}
+.dark > main > .business {
+	grid-area: business;
+	align-items: flex-start;
+
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.dark > main > .website {
+	grid-area: website;
+	align-items: flex-start;
+}
+.dark > main > .icon {
+	grid-area: icon;
+
+	align-items: center;
+	padding: 0;
+}
+.dark > main > .icon > .material-icons {
+	font-size: 60px;
+	line-height: 0.4;
 }
